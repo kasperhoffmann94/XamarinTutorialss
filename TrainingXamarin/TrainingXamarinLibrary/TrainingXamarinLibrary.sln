@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingXamarinLibrary", "TrainingXamarinLibrary.csproj", "{350DCD76-66F1-4830-949F-0FE56418F81A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingRoom.droid", "..\TrainingRoom.droid\TrainingRoom.droid.csproj", "{8DB8E787-3CA7-4CB3-A455-B759A063F40C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{350DCD76-66F1-4830-949F-0FE56418F81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350DCD76-66F1-4830-949F-0FE56418F81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350DCD76-66F1-4830-949F-0FE56418F81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350DCD76-66F1-4830-949F-0FE56418F81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB8E787-3CA7-4CB3-A455-B759A063F40C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D8B324D-4FF6-4917-8F88-14250997A7CC}
+	EndGlobalSection
+EndGlobal
