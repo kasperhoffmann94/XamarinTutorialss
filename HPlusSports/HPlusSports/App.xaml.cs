@@ -10,19 +10,22 @@ namespace HPlusSports
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
+            Services.ProductService.LoadWishList();
         }
 
         protected override void OnSleep()
         {
+            Services.ProductService.SaveWishList();
         }
 
         protected override void OnResume()
         {
+            Services.ProductService.LoadWishList();
         }
     }
 }
