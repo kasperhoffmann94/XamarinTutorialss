@@ -3,35 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:HPlusSports.MarkupExtensions"
+             xmlns:local="clr-namespace:HPlusSports.MarkupExtensions" 
+             xmlns:design="clr-namespace:HPlusSports.Design;assembly=HPlusSports"
+             BindingContext="{x:Static design:ProductModel.Product}"
              mc:Ignorable="d"
              x:Class="HPlusSports.ProductDetail">
     <ContentPage.Content>
-      <StackLayout>
+        <StackLayout>
             <StackLayout Orientation="Vertical" Padding="10,20">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Name: "></Label>
-                    <Label Text="PRODUCT NAME"></Label>
+                    <Label Text="{Binding Path=Name}"></Label>
                 </StackLayout>
 
                 <StackLayout Orientation="Vertical">
                     <Label Text="Description: "></Label>
-                    <Label Text= "PRODUCT DESCRIPTION PRODUCT DESCRIPTION PRODUCT DESCRIPTION PRODUCT DESCRIPTION PRODUCT DESCRIPTION PRODUCT DESCRIPTION"></Label>
+                    <Label Text= "{Binding Description}"></Label>
                 </StackLayout>
 
-                <Image Source="roman.jpg" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
-                    
+                <Image Source="{Binding Path=ImageUri}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+
                 </Image>
-                    <!--<Image Source="{local:EmbeddedImage ResourceId=HPlusSports.Images.roman.jpg}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                <!--<Image Source="{local:EmbeddedImage ResourceId=HPlusSports.Images.roman.jpg}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
 
                 </Image> -->
 
                 <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
                     <Button Text="Order" x:Name="OrderBtn" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.25}">
-                        
+
                     </Button>
                     <Button Text="Favorite" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=OrderBtn, Property=X, Constant=100   }">
-                        
+
                     </Button>
                 </RelativeLayout>
             </StackLayout>

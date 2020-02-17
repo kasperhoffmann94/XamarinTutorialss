@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HPlusSports.Services;
 using Xamarin.Forms;
 
 namespace HPlusSports
@@ -18,9 +19,17 @@ namespace HPlusSports
             InitializeComponent();
         }
 
-        public void Handle_Clicked(object sender, EventArgs e)
+        private void Item_Selected(object sender, SelectionChangedEventArgs e)
         {
-            Navigation.PushAsync(new ProductDetail());
+            Services.Product product = e.CurrentSelection.First() as Services.Product;
+            Navigation.PushAsync(new ProductDetail(product));
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            var products = await ProductService.GetProductsAsync();
+            BindingContext = products;
         }
     }
 }

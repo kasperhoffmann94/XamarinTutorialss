@@ -15,7 +15,14 @@ namespace HPlusSports
         public ProductDetail()
         {
             InitializeComponent();
-            Image embeddedImage = new Image { Source = ImageSource.FromResource("HPlusSports.Images.jpg") };
+            Image embeddedImage = new Image { Source = ImageSource.FromResource("HPlusSports.Images.roman.jpg") };
+        }
+
+        public ProductDetail(Services.Product product)
+        {
+            InitializeComponent();
+            BindingContext = product;
+            Image embeddedImage = new Image { Source = ImageSource.FromResource("HPlusSports.Images.roman.jpg") };
         }
 
         public ImageSource Image
