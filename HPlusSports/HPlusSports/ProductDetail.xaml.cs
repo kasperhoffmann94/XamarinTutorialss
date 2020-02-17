@@ -15,6 +15,15 @@ namespace HPlusSports
         public ProductDetail()
         {
             InitializeComponent();
+            Image embeddedImage = new Image { Source = ImageSource.FromResource("HPlusSports.Images.jpg") };
+        }
+
+        public ImageSource Image
+        {
+            get
+            {
+                return ImageSource.FromResource("HPlusSports.Images.roman.jpg");
+            }
         }
     }
 }

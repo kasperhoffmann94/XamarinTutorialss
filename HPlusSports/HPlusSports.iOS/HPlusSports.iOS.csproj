@@ -135,4 +135,7 @@
       <Name>HPlusSports</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\roman.jpg" />
+  </ItemGroup>
 </Project>
