@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using HPlusSports.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,5 +32,12 @@ namespace HPlusSports
                 return ImageSource.FromResource("HPlusSports.Images.roman.jpg");
             }
         }
+
+        public void Handle_Clicked(object sender, EventArgs e)
+        {
+            Services.Product p = BindingContext as Services.Product;
+            Navigation.PushAsync(new OrderForm(
+                new Services.Order { ProductName = p.Name, Quantity = 1 }));
+        }
     }
-}
+} 

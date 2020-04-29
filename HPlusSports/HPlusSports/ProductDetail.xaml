@@ -9,35 +9,38 @@
              mc:Ignorable="d"
              x:Class="HPlusSports.ProductDetail">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Vertical" Padding="10,20">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Name: "></Label>
-                    <Label Text="{Binding Path=Name}"></Label>
-                </StackLayout>
+        <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <StackLayout Orientation="Vertical">
-                    <Label Text="Description: "></Label>
-                    <Label Text= "{Binding Description}"></Label>
-                </StackLayout>
 
-                <Image Source="{Binding Path=ImageUri}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+            <StackLayout>
+                <StackLayout Orientation="Vertical" Padding="10,20">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Name: "></Label>
+                        <Label Text="{Binding Path=Name}"></Label>
+                    </StackLayout>
 
-                </Image>
-                <!--<Image Source="{local:EmbeddedImage ResourceId=HPlusSports.Images.roman.jpg}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Description: "></Label>
+                        <Label Text= "{Binding Description}"></Label>
+                    </StackLayout>
+
+                    <Image Source="{Binding Path=ImageUri}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+
+                    </Image>
+                    <!--<Image Source="{local:EmbeddedImage ResourceId=HPlusSports.Images.roman.jpg}" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
 
                 </Image> -->
 
-                <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
-                    <Button Text="Order" x:Name="OrderBtn" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.25}">
+                    <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Button Text="Order" Clicked="Handle_Clicked" x:Name="OrderBtn" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.25}">
 
-                    </Button>
-                    <Button Text="Favorite" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=OrderBtn, Property=X, Constant=100   }">
+                        </Button>
+                        <Button Text="Favorite" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=OrderBtn, Property=X, Constant=100   }">
 
-                    </Button>
-                </RelativeLayout>
+                        </Button>
+                    </RelativeLayout>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
