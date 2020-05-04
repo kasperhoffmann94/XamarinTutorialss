@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 using HPlusSports.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+#if __IOS__
+using Xamarin.Forms.Platform.iOS;
+using UIKit;
+#elif __ANDROID__
+using Xamarin.Forms.Platform.Android;
+using Android.Graphics;
+using Android.Widget;
+#endif
+
 
 namespace HPlusSports
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    [Xamarin.Forms.Xaml.XamlCompilation(Xamarin.Forms.Xaml.XamlCompilationOptions.Skip)]
     public partial class OrderForm : TabbedPage
     {
         public OrderForm()
