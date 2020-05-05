@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HPlusSports.Services;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 #if __IOS__
 using Xamarin.Forms.Platform.iOS;
@@ -36,7 +37,16 @@ namespace HPlusSports
         public void Handle_Clicked(object sender, EventArgs e)
         {
             Order o = BindingContext as Order;
-            DisplayAlert("Order placed", $"Order placed for {o.Quantity} of {o.ProductName}", "OK");
+
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                DisplayAlert("Order placed", $"Order placed for {o.Quantity} of {o.ProductName} and you rated it {o.Rating + 1}", "OK");
+            }
+            else
+            {
+                DisplayAlert("Order placed", $"Order placed for {o.Quantity} of {o.ProductName} and you rated it {o.Rating}", "OK");
+            }
+
         }
     }
 }
